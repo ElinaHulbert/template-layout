@@ -3,9 +3,15 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     color: #333;
-    line-height: 1.6; /*межчтрочный отступ*/
-
+    line-height: 1.6; 
+    max-width: 100%;
+    height: auto;
 }
+/* html, body { 
+    position: relative;
+    overflow-x: hidden; 
+} */
+
 
 hr{
     border: 0;
@@ -25,12 +31,16 @@ hr{
 h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
+ /* *{
+     outline: solid red;
+ } */
 
 /*container*/
 .container{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 /*intro*/
 .intro{
@@ -206,12 +216,13 @@ h1, h2, h3, h4, h5, h6{
     background-color: #f8f8f8;
 }
 .section--clients{
-    background-image: url("../images/clients-bg.jpg");
+    background: url("../images/clients-bg.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 .section--map{
-    background-image: url("../images/map-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../images/map-bg.jpg") center no-repeat;
+    -webkit-background-size: cover;
     background-size: cover;
     padding: 40px 0;
 }
@@ -246,12 +257,14 @@ h1, h2, h3, h4, h5, h6{
 }
 /* Card */
 .card{
-    margin-top: 80px;
+    margin-top: 80px -15px 0;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .card__item{
-    width: 380px;
+    width: 33.33333%;
+    padding: 0 15px;
 }
 .card__inner{
     position: relative;
@@ -272,6 +285,8 @@ h1, h2, h3, h4, h5, h6{
 }
 .card__img img{
     display:block;
+    max-width: 100%;
+    height: auto;
     transition: opacity .3s ease-in-out;
 }
 .card__text{
@@ -311,6 +326,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .stat{
     display: flex;
+    flex-wrap: wrap;
 }
 .stat__item{
     flex: 1 1 0;
@@ -336,12 +352,16 @@ h1, h2, h3, h4, h5, h6{
 /* Services */
 .services{
     display: flex;
+    flex-wrap: wrap;
 }
 .services__item{
-    flex: 1 1 0;
-    padding-left: 85px;
+    width: 33.33333%;
+    padding: 0 35px 40px 85px;
     position: relative;
-    padding-right: 35px;
+    margin-bottom: 40px;
+}
+.services__item--border{
+    border-bottom: 1px solid #e5e5e5;
 }
 .services__icon{
     position: absolute;
@@ -368,6 +388,8 @@ h1, h2, h3, h4, h5, h6{
 }
 .devices__item{
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 .devices__item--iphone{
     position: absolute;
@@ -378,9 +400,17 @@ h1, h2, h3, h4, h5, h6{
 /* We do */
 .wedo{
     display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
 }
 .wedo__item{
     width: 50%;
+    padding: 0 15px;
+}
+.wedo__img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 /* Accordion */
 .accordion__item{
@@ -454,6 +484,9 @@ h1, h2, h3, h4, h5, h6{
     z-index: 1;
     border: 2px solid #95e1d3;
     border-radius: 50%;
+    width: 210px;
+    height: 210px;
+    display: block;
 }
 .reviews__text{
     font-size: 24px;
@@ -528,6 +561,16 @@ h1, h2, h3, h4, h5, h6{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 -15px;
+
+}
+.logos__item{
+    padding: 0 15px;
+}
+.logos__img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 /* Works */
 .works{
@@ -535,10 +578,12 @@ h1, h2, h3, h4, h5, h6{
 }
 .works__col{
     flex: 1 1 0;
+    
 }
 .works__item{
     position: relative;
     background: linear-gradient(to bottom, #f38181, #fce38a);
+   
 }
 .works__item:hover .works__image{
     opacity: .1;
@@ -551,6 +596,7 @@ h1, h2, h3, h4, h5, h6{
     display: block;
     max-width: 100%;
     height: auto;
+    width: 100%;
 }
 .works__info{
     position: absolute;
@@ -624,6 +670,7 @@ h1, h2, h3, h4, h5, h6{
 .blog{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .blog__item{
     width: 31%;
@@ -765,7 +812,12 @@ h1, h2, h3, h4, h5, h6{
 .footer__inner{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-bottom: 65px;
+    margin: 0 -15px;
+}
+.footer__col{
+    padding: 0 15px;
 }
 .footer__col--first{
     width: 40%;
@@ -868,11 +920,13 @@ h1, h2, h3, h4, h5, h6{
     justify-content: space-between;
 }
 .instagram__item{
-    width: 32.3333%;
+    width: 33%;
     border-bottom: 1px solid #fff;
 }
 .instagram__item img{
     display: block;
+    max-width:100%;
+    height: auto;
 }
 /* Copyright */
 .copyright{
