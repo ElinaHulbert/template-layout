@@ -21,11 +21,11 @@ $(function(){
 
 // Smooth scroll
 
-    $("[data-scroll]").on("click", function(event){
-        event.preventDefault();
+    $("[data-scroll]").on("click", function(event){ //checking for a click of an element with data-scroll attribute
+        event.preventDefault(); //preventing the default behaviour for links so the page won't update
         var $this = $(this),
-            blockId = $this.data("scroll"),
-            blockOffset = $(blockId).offset().top;
+            blockId = $this.data("scroll"), //get the id of the clicked element
+            blockOffset = $(blockId).offset().top -40;
 
         $("#nav a").removeClass("active")
         $this.addClass=("active");
@@ -36,3 +36,28 @@ $(function(){
         
     });
 });
+
+// Menu nav toggle
+$("#nav_toggle").on("click", function(event){
+    event.preventDefault();
+    $(this).toggleClass("active");
+    $("#nav").toggleClass("active");
+});
+// Collapse
+$("[data-collapse]").on("click", function(event){
+    event.preventDefault();
+
+    var $this = $(this),
+    blockId = $this.data("collapse");
+    $(blockId).slideToggle();
+    $this.toggleClass("active");
+    
+// Slider
+$("[data-slider]").slick({
+    infinite: true,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
+
+})
