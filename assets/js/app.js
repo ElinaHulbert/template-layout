@@ -35,7 +35,6 @@ $(function(){
         }, 500);
         
     });
-});
 
 // Menu nav toggle
 $("#nav_toggle").on("click", function(event){
@@ -51,13 +50,14 @@ $("[data-collapse]").on("click", function(event){
     blockId = $this.data("collapse");
     $(blockId).slideToggle();
     $this.toggleClass("active");
+});
     
 // Slider
 $("[data-slider]").slick({
     infinite: true,
-    fade: true,
+    fade: false,
     slidesToShow: 1,
     slidesToScroll: 1
 });
 
-})
+});

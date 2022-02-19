@@ -42,7 +42,7 @@
     border-bottom: 0;
 }
 /* Reviews */
-.reviews{
+.reviews .slick-slider{
     padding: 0 60px;
 }
 .reviews__photo{
@@ -249,10 +249,10 @@
     left: auto;
 }
 /* Reviews */
-.reviews{
+.reviews .slick-slider{
     padding: 0;
 }
-.reviews__btn{
+.slick-arrow{
     top: 18%;
 }
 /* Logos */

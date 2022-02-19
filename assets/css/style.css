@@ -545,12 +545,15 @@ h1, h2, h3, h4, h5, h6{
 }
 /* Reviews */
 .reviews{
-    padding: 0 110px;
     position: relative;
+}
+.reviews .slick-slider{
+    padding: 0 110px;
 }
 .reviews__item{
     position: relative;
     padding-left: 255px;
+    min-height: 210px;
 }
 .reviews__photo{
     position: absolute;
@@ -584,15 +587,20 @@ h1, h2, h3, h4, h5, h6{
     height: 3px;
     margin-right: 10px;
 }
-.reviews__btn{
+
+.slick-arrow{
+    display: block;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
     font-size: 0;
     color: transparent;
+    border: 0;
+    background: none;
+    cursor: pointer;
 }
-.reviews__btn:after{
+.slick-arrow:after{
     content:"";
     display: block;
     width: 16px;
@@ -601,11 +609,15 @@ h1, h2, h3, h4, h5, h6{
     border-left: 2px solid #ccc;
     margin-top: -3px;
 }
-.reviews__btn--prev{
+.slick-arrow:focus{
+    outline: 0;
+}
+.slick-prev{
     left:0;
     transform:  rotate(-45deg);
 }
-.reviews__btn--next{
+.reviews__btn--next,
+.slick-next{
     right:0;
     transform:  rotate(135deg);
 }
