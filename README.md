@@ -1,4 +1,6 @@
 # Templating. Landing Page for a company with jQuery
+##### :clock1130: Date: 
+February 2022
 ##### :muscle: What was my motivation?
 It's been a long time I have studied React and JavaScript and sometimes it felt like I need to go back to templating to feel more confident. Therefore I found a free psd template and built it.
 ##### :books: What did I learn?
